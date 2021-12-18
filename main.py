@@ -1,3 +1,4 @@
+import time
 import turtle
 from turtle import Screen
 from car import Car
@@ -6,7 +7,7 @@ from player import Player
 from level import Level
 
 screen = Screen()
-screen.tracer()
+screen.tracer(0)
 screen.listen()
 cars = []
 speed = 15
@@ -32,6 +33,7 @@ def reload():
 game_is_on = True
 
 while game_is_on:
+    time.sleep(0.1)
     screen.update()
 
     if player.ycor() > 200:
